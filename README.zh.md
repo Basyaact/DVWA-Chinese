@@ -1,6 +1,6 @@
 # Translation
 
-翻译：@[inVains](https://github.com/inVains)
+翻译：@[Basyaact](https://github.com/Basyaact)
 
 部分来自机器翻译，请以原文为准[README.md](README.md)
 
