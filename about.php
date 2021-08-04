@@ -47,7 +47,7 @@ $page[ 'body' ] .= "
 	<p>是一个免费开源的软件：你可以在GPL-3协议下使用或更改它用于发布免费软件，或者根据你的意向使用其他的版本</p>
 	<p>已包含PHPIDS库, 真诚的使用此发行版, PHPIDS 的操作是在没有 DVWA 团队支持的情况下提供的。 它是根据 <a href=\"" . DVWA_WEB_PAGE_TO_ROOT . "instructions.php?doc=PHPIDS-license\">separate terms</a> 条款来完成dvwa的代码.</p>
 
-	<h2>Development</h2>
+	<h2>关于开发</h2>
 	<p>每个人都可以为DVWA更好的成功做贡献. 每一个贡献者的名字和他们的主页都能在贡献者名单上出现(如果他们愿意的话). 贡献者可以在DVWA主项目里选择一个Issue然后提交Issue List.</p>
 </div>\n";
 
