@@ -51,7 +51,7 @@ $page[ 'body' ] .= "
 
 	<div class=\"vulnerable_code_area\">";
 if( $vulnerabilityFile == 'high.php' ) {
-	$page[ 'body' ] .= "Click <a href=\"#\" onclick=\"javascript:popUp('cookie-input.php');return false;\">here to change your ID</a>.";
+	$page[ 'body' ] .= "<a href=\"#\" onclick=\"javascript:popUp('cookie-input.php');return false;\">点击这里来更改你的ID</a>.";
 }
 else {
 	$page[ 'body' ] .= "
