@@ -45,7 +45,7 @@ if( isset( $_POST[ 'Login' ] ) ) {
 	}
 
 	// Login failed
-	dvwaMessagePush( 'Login failed' );
+	dvwaMessagePush( '用户名或密码错误' );
 	dvwaRedirect( 'login.php' );
 }
 
