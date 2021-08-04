@@ -11,7 +11,7 @@ if( !dvwaIsLoggedIn() ) {	// The user shouldn't even be on this page
 }
 
 dvwaLogout();
-dvwaMessagePush( "You have logged out" );
+dvwaMessagePush( "你已经登出" );
 dvwaRedirect( 'login.php' );
 
 ?>
