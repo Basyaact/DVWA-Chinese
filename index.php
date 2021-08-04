@@ -35,7 +35,7 @@ $page[ 'body' ] .= "
 	<br />
 
 	<h2>更多用于训练的项目</h2>
-	<p>DVWA旨在覆盖当今web应用程序中最常见的漏洞。然而，web应用程序还有很多其他问题。如果您希望探索任何其他攻击向量，或者想要更困难的挑战，您可能希望研究以下其他项目:</p>
+	<p>DVWA旨在覆盖当今web应用程序中最常见的漏洞。然而，web应用程序还有很多其他问题。如果您希望探索任何其他攻击方式，或者想要更困难的挑战，您可能希望研究以下其他项目:</p>
 	<ul>
 		<li>" . dvwaExternalLinkUrlGet( 'https://github.com/webpwnized/mutillidae', 'Mutillidae') . "</li>
 		<li>" . dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/OWASP_Broken_Web_Applications_Project', 'OWASP Broken Web Applications Project
