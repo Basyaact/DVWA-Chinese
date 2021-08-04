@@ -12,7 +12,7 @@ $page[ 'page_id' ] = 'home';
 $page[ 'body' ] .= "
 <div class=\"body_padded\">
 	<h1>欢迎来到DVWA漏洞环境!</h1>
-	<h2>汉化作者：@Basyaact,github:https://github.com/Basyaact
+	<h2>汉化作者：@Basyaact,github:https://github.com/Basyaact</h2>
 	<p>DVWA是一个非常易受攻击的PHP/MySQL Web应用程序。其主要目标是帮助安全专业人员在法律环境中测试他们的技能和工具，帮助web开发人员更好地理解保护web应用程序的过程，并帮助学生和教师在受控教室环境中学习web应用程序安全.</p>
 	<p>DVWA的目标是 <em>练习一些最常见的web漏洞</em>, 有着<em>不同的难度</em>, 并具有简单直观的界面.</p>
 	<hr />
