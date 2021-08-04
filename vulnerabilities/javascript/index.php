@@ -41,23 +41,23 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 			switch( $_COOKIE[ 'security' ] ) {
 				case 'low':
 					if ($token == md5(str_rot13("success"))) {
-						$message = "<p style='color:red'>Well done!</p>";
+						$message = "<p style='color:red'>干得不错!</p>";
 					} else {
-						$message = "<p>Invalid token.</p>";
+						$message = "<p>无效的token.</p>";
 					}
 					break;
 				case 'medium':
 					if ($token == strrev("XXsuccessXX")) {
-						$message = "<p style='color:red'>Well done!</p>";
+						$message = "<p style='color:red'>干得不错!</p>";
 					} else {
-						$message = "<p>Invalid token.</p>";
+						$message = "<p>无效的token.</p>";
 					}
 					break;
 				case 'high':
 					if ($token == hash("sha256", hash("sha256", "XX" . strrev("success")) . "ZZ")) {
-						$message = "<p style='color:red'>Well done!</p>";
+						$message = "<p style='color:red'>干得不错!</p>";
 					} else {
-						$message = "<p>Invalid token.</p>";
+						$message = "<p>无效的token.</p>";
 					}
 					break;
 				default:
@@ -65,10 +65,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 					break;
 			}
 		} else {
-			$message = "<p>You got the phrase wrong.</p>";
+			$message = "<p>词语输入有误.</p>";
 		}
 	} else {
-		$message = "<p>Missing phrase or token.</p>";
+		$message = "<p>无法找到字符或token.</p>";
 	}
 }
 

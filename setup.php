@@ -86,12 +86,12 @@ $page[ 'body' ] .= "
 	<br />
 	{$bakWritable}
 	<br />
-	<i><span class=\"failure\">Status in red</span>, indicate there will be an issue when trying to complete some modules.</i><br />
+	<i><span class=\"failure\">状态为红</span>, 说明在使用模块中这里有一些问题.</i><br />
 	<br />
-	If you see disabled on either <i>allow_url_fopen</i> or <i>allow_url_include</i>, set the following in your php.ini file and restart Apache.<br />
-	<pre><code>allow_url_fopen = On
-allow_url_include = On</code></pre>
-	These are only required for the file inclusion labs so unless you want to play with those, you can ignore them.
+	如果在 <i>allow_url_fopen</i> 或 <i>allow_url_include</i>上状态为红色, 检查你的php.ini配置文件然后重启Apache.<br />
+	<pre><code>allow_url_fopen = 开启
+allow_url_include = 开启</code></pre>
+	这些功能仅在文件包含(File Inclusion)模块中是必需的，除非您想使用这个功能，否则可以忽略它们.
 
 	<br /><br /><br />
 
