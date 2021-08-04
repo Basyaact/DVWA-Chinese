@@ -1,7 +1,7 @@
 # Translation
 
 翻译：@[Basyaact](https://github.com/Basyaact)
-
+全环境已汉化，供中国用户使用，如有侵权，请联系邮箱：en.crypt@icloud.com
 部分来自机器翻译，请以原文为准[README.md](README.md)
 
 - - -
