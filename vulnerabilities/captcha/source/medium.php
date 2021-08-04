@@ -26,7 +26,7 @@ if( isset( $_POST[ 'Change' ] ) && ( $_POST[ 'step' ] == '1' ) ) {
 		if( $pass_new == $pass_conf ) {
 			// Show next stage for the user
 			$html .= "
-				<pre><br />You passed the CAPTCHA! Click the button to confirm your changes.<br /></pre>
+				<pre><br />你绕过了验证码，点击这个按钮来确认你的变更.<br /></pre>
 				<form action=\"#\" method=\"POST\">
 					<input type=\"hidden\" name=\"step\" value=\"2\" />
 					<input type=\"hidden\" name=\"password_new\" value=\"{$pass_new}\" />
@@ -37,7 +37,7 @@ if( isset( $_POST[ 'Change' ] ) && ( $_POST[ 'step' ] == '1' ) ) {
 		}
 		else {
 			// Both new passwords do not match.
-			$html     .= "<pre>Both passwords must match.</pre>";
+			$html     .= "<pre>两次密码必须统一.</pre>";
 			$hide_form = false;
 		}
 	}
@@ -53,7 +53,7 @@ if( isset( $_POST[ 'Change' ] ) && ( $_POST[ 'step' ] == '2' ) ) {
 
 	// Check to see if they did stage 1
 	if( !$_POST[ 'passed_captcha' ] ) {
-		$html     .= "<pre><br />You have not passed the CAPTCHA.</pre>";
+		$html     .= "<pre><br />你没有通过验证码.</pre>";
 		$hide_form = false;
 		return;
 	}
@@ -69,11 +69,11 @@ if( isset( $_POST[ 'Change' ] ) && ( $_POST[ 'step' ] == '2' ) ) {
 		$result = mysqli_query($GLOBALS["___mysqli_ston"],  $insert ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
 
 		// Feedback for the end user
-		$html .= "<pre>Password Changed.</pre>";
+		$html .= "<pre>密码已改变.</pre>";
 	}
 	else {
 		// Issue with the passwords matching
-		$html .= "<pre>Passwords did not match.</pre>";
+		$html .= "<pre>密码不匹配.</pre>";
 		$hide_form = false;
 	}
 

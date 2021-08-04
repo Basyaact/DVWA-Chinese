@@ -31,17 +31,17 @@ if( isset( $_POST[ 'Change' ] ) ) {
 			$result = mysqli_query($GLOBALS["___mysqli_ston"],  $insert ) or die( '<pre>' . ((is_object($GLOBALS["___mysqli_ston"])) ? mysqli_error($GLOBALS["___mysqli_ston"]) : (($___mysqli_res = mysqli_connect_error()) ? $___mysqli_res : false)) . '</pre>' );
 
 			// Feedback for user
-			$html .= "<pre>Password Changed.</pre>";
+			$html .= "<pre>密码已更改.</pre>";
 
 		} else {
 			// Ops. Password mismatch
-			$html     .= "<pre>Both passwords must match.</pre>";
+			$html     .= "<pre>两个密码必须统一.</pre>";
 			$hide_form = false;
 		}
 
 	} else {
 		// What happens when the CAPTCHA was entered incorrectly
-		$html     .= "<pre><br />The CAPTCHA was incorrect. Please try again.</pre>";
+		$html     .= "<pre><br />验证码不正确，请再试一遍.</pre>";
 		$hide_form = false;
 		return;
 	}

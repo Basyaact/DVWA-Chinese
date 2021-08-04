@@ -32,7 +32,7 @@ if( isset( $_POST[ 'Change' ] ) ) {
 	// Did the CAPTCHA fail?
 	if( !$resp ) {
 		// What happens when the CAPTCHA was entered incorrectly
-		$html .= "<pre><br />The CAPTCHA was incorrect. Please try again.</pre>";
+		$html .= "<pre><br />验证码不正确，请再试一次.</pre>";
 		$hide_form = false;
 	}
 	else {
@@ -51,11 +51,11 @@ if( isset( $_POST[ 'Change' ] ) ) {
 			$data->execute();
 
 			// Feedback for the end user - success!
-			$html .= "<pre>Password Changed.</pre>";
+			$html .= "<pre>密码已更改.</pre>";
 		}
 		else {
 			// Feedback for the end user - failed!
-			$html .= "<pre>Either your current password is incorrect or the new passwords did not match.<br />Please try again.</pre>";
+			$html .= "<pre>你的原密码错误或新密码不匹配.<br />请再试一次.</pre>";
 			$hide_form = false;
 		}
 	}
