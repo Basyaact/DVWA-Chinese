@@ -12,19 +12,19 @@ $page[ 'page_id' ] = 'about';
 $page[ 'body' ] .= "
 <div class=\"body_padded\">
 	<h2>About</h2>
-	<p>Damn Vulnerable Web Application (DVWA) is a PHP/MySQL web application that is damn vulnerable. Its main goals are to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and aid teachers/students to teach/learn web application security in a class room environment</p>
+	<p>DVWA是一个非常易受攻击的PHP/MySQL Web应用程序。其主要目标是帮助安全专业人员在法律环境中测试他们的技能和工具，帮助web开发人员更好地理解保护web应用程序的过程，并帮助学生和教师在受控教室环境中学习web应用程序安全</p>
 	<p>Pre-August 2020, All material is copyright 2008-2015 RandomStorm & Ryan Dewhurst.</p>
 	<p>Ongoing, All material is copyright Robin Wood and probably Ryan Dewhurst.</p>
 
-	<h2>Links</h2>
+	<h2>链接</h2>
 	<ul>
-		<li>Homepage: " . dvwaExternalLinkUrlGet( 'http://www.dvwa.co.uk/' ) . "</li>
-		<li>Project Home: " . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA' ) . "</li>
-		<li>Bug Tracker: " . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA/issues' ) . "</li>
-		<li>Wiki: " . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA/wiki' ) . "</li>
+		<li>主页: " . dvwaExternalLinkUrlGet( 'http://www.dvwa.co.uk/' ) . "</li>
+		<li>项目主页: " . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA' ) . "</li>
+		<li>Bug反馈: " . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA/issues' ) . "</li>
+		<li>维基百科: " . dvwaExternalLinkUrlGet( 'https://github.com/digininja/DVWA/wiki' ) . "</li>
 	</ul>
 
-	<h2>Credits</h2>
+	<h2>贡献者</h2>
 	<ul>
 		<li>Brooks Garrett: " . dvwaExternalLinkUrlGet( 'http://brooksgarrett.com/','www.brooksgarrett.com' ) . "</li>
 		<li>Craig</li>
@@ -40,18 +40,15 @@ $page[ 'body' ] .= "
 		<li>Zhengyang Song: " . dvwaExternalLinkUrlGet( 'https://github.com/songzy12/','songzy12' ) . "</li>
 	</ul>
 	<ul>
-		<li>PHPIDS - Copyright (c) 2007 " . dvwaExternalLinkUrlGet( 'http://github.com/PHPIDS/PHPIDS', 'PHPIDS group' ) . "</li>
+		<li>PHPIDS - Copyright (c) 2007 " . dvwaExternalLinkUrlGet( 'http://github.com/PHPIDS/PHPIDS', 'PHPIDS 团队' ) . "</li>
 	</ul>
 
-	<h2>License</h2>
-	<p>Damn Vulnerable Web Application (DVWA) is free software: you can redistribute it and/or modify
-	it under the terms of the GNU General Public License as published by
-	the Free Software Foundation, either version 3 of the License, or
-	(at your option) any later version.</p>
-	<p>The PHPIDS library is included, in good faith, with this DVWA distribution. The operation of PHPIDS is provided without support from the DVWA team. It is licensed under <a href=\"" . DVWA_WEB_PAGE_TO_ROOT . "instructions.php?doc=PHPIDS-license\">separate terms</a> to the DVWA code.</p>
+	<h2>条款</h2>
+	<p>是一个免费开源的软件：你可以在GPL-3协议下使用或更改它用于发布免费软件，或者根据你的意向使用其他的版本</p>
+	<p>已包含PHPIDS库, 真诚的使用此发行版, PHPIDS 的操作是在没有 DVWA 团队支持的情况下提供的。 它是根据 <a href=\"" . DVWA_WEB_PAGE_TO_ROOT . "instructions.php?doc=PHPIDS-license\">separate terms</a> 条款来完成dvwa的代码.</p>
 
 	<h2>Development</h2>
-	<p>Everyone is welcome to contribute and help make DVWA as successful as it can be. All contributors can have their name and link (if they wish) placed in the credits section. To contribute pick an Issue from the Project Home to work on or submit a patch to the Issues list.</p>
+	<p>每个人都可以为DVWA更好的成功做贡献. 每一个贡献者的名字和他们的主页都能在贡献者名单上出现(如果他们愿意的话). 贡献者可以在DVWA主项目里选择一个Issue然后提交Issue List.</p>
 </div>\n";
 
 dvwaHtmlEcho( $page );
