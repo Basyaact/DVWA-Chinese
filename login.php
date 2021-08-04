@@ -92,7 +92,7 @@ echo "<!DOCTYPE html>
 
 	<fieldset>
 
-			<label for=\"user\">用户名（默认admin）e</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />
+			<label for=\"user\">用户名（默认admin)</label> <input type=\"text\" class=\"loginInput\" size=\"20\" name=\"username\"><br />
 
 
 			<label for=\"pass\">密码(默认password)</label> <input type=\"password\" class=\"loginInput\" AUTOCOMPLETE=\"off\" size=\"20\" name=\"password\"><br />
