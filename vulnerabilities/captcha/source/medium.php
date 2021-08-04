@@ -17,7 +17,7 @@ if( isset( $_POST[ 'Change' ] ) && ( $_POST[ 'step' ] == '1' ) ) {
 	// Did the CAPTCHA fail?
 	if( !$resp ) {
 		// What happens when the CAPTCHA was entered incorrectly
-		$html     .= "<pre><br />The CAPTCHA was incorrect. Please try again.</pre>";
+		$html     .= "<pre><br />验证码不正确，请检查.</pre>";
 		$hide_form = false;
 		return;
 	}
