@@ -5,38 +5,40 @@
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
-		<h3>About</h3>
-		<p>Content Security Policy (CSP) is used to define where scripts and other resources can be loaded or executed from. This module will walk you through ways to bypass the policy based on common mistakes made by developers.</p>
-		<p>None of the vulnerabilities are actual vulnerabilities in CSP, they are vulnerabilities in the way it has been implemented.</p>
+		<h3>关于</h3>
+		<p>内容安全策略用于定义可以从何处加载或执行脚本或其他资源。本模块将根据开发者留下的常见错误引导您绕过此方法
+.</p>
+		<p>这些漏洞都不是CSP中的实际漏洞，它们是CSP启用中的漏洞.</p>
 
 		<br /><hr /><br />
 
 		<h3>Objective</h3>
-		<p>Bypass Content Security Policy (CSP) and execute JavaScript in the page.</p>
+		<p>绕过内容安全策略（CSP）并在页面中执行JavaScript.</p>
 
 		<br /><hr /><br />
 
-		<h3>Low Level</h3>
-		<p>Examine the policy to find all the sources that can be used to host external script files.</p>
-		<pre>Spoiler: <span class="spoiler">Scripts can be included from Pastebin or Hastebin, try storing some JavaScript on there and then loading it in.</span></pre>
+		<h3>低安全水平</h3>
+		<p>检查策略以查找可用于继承外部脚本文件的所有源.</p>
+		<pre>Spoiler: <span class="spoiler">脚本可以从Pastebin或Hastebin中找到，尝试在其中存储一些JavaScript方式，然后将其加载。
+.</span></pre>
 
 		<br />
 
-		<h3>Medium Level</h3>
-		<p>The CSP policy tries to use a nonce to prevent inline scripts from being added by attackers.</p>
-		<pre>Spoiler: <span class="spoiler">Examine the nonce and see how it varies (or doesn't).</span></pre>
+		<h3>中等安全级别</h3>
+		<p>CSP策略尝试使用临时造的来防止攻击者添加内联脚本.</p>
+		<pre>Spoiler: <span class="spoiler">检查任意或非重复的随机数值并观察变化（或不变化）.</span></pre>
 
 		<br />
 
 		<h3>High Level</h3>
-		<p>The page makes a JSONP call to source/jsonp.php passing the name of the function to callback to, you need to modify the jsonp.php script to change the callback function.</p>
-		<pre>Spoiler: <span class="spoiler">The JavaScript on the page will execute whatever is returned by the page, changing this to your own code will execute that instead</span></pre>
+		<p>页面对source/JSONP.php-4进行JSONP调用，然后将函数名传递给脚本用于调用，您需要修改JSONP.php脚本以更改回调函数.</p>
+		<pre>Spoiler: <span class="spoiler">页面上的JavaScript将执行页面返回的任何内容，将其更改为您自己的代码将执行该代码</span></pre>
 
 		<br />
 
-		<h3>Impossible Level</h3>
+		<h3>困难安全等级</h3>
 		<p>
-			This level is an update of the high level where the JSONP call has its callback function hardcoded and the CSP policy is locked down to only allow external scripts.
+		此级别是最困难的提升，其中JSONP调用具有硬编码的回调函数，并且CSP策略被锁定为仅允许加载外部脚本.
 		</p>
 	</div></td>
 	</tr>
