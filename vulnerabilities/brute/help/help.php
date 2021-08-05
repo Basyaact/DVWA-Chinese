@@ -5,58 +5,53 @@
 	<table width='100%' bgcolor='white' style="border:2px #C0C0C0 solid">
 	<tr>
 	<td><div id="code">
-		<h3>About</h3>
-		<p>Password cracking is the process of recovering passwords from data that has been stored in or transmitted by a computer system.
-			A common approach is to repeatedly try guesses for the password.</p>
+		<h3>简介</h3>
+		<p>密码破解是从计算机系统中存储或传输的数据中恢复密码的过程。常用的方法是反复尝试猜解密码（暴力破解/穷举法）.</p>
 
-		<p>Users often choose weak passwords. Examples of insecure choices include single words found in dictionaries, family names, any too short password
-			(usually thought to be less than 6 or 7 characters), or predictable patterns
-			(e.g. alternating vowels and consonants, which is known as leetspeak, so "password" becomes "p@55w0rd").</p>
+		<p>如果用户经常使用弱口令，例如可以在爆破字典，小名和名字，和任何短位数密码进行碰撞
+			(一般考虑密码小于6-7位), 或者猜测可能出现的字符
+			(例如：字符与相似的符号或数字交替使用，称为leetspeak，所以“password”变成为“p@55w0rd".").</p>
 
-		<p>Creating a targeted wordlists, which is generated towards the target, often gives the highest success rate. There are public tools out there that will create a dictionary
-			based on a combination of company websites, personal social networks and other common information (such as birthdays or year of graduation).
+		<p>创建对目标的爆破字典，一般来说应该是一对一生成字典，成功率会更高一些。在网络上通常有工具来创建一个爆破用字典。
+			例如基于公司网站、个人社交网络和其他常见信息（如生日或毕业年份）的组合字典。
 
-		<p>A last resort is to try every possible password, known as a brute force attack. In theory, if there is no limit to the number of attempts, a brute force attack will always
-			be successful since the rules for acceptable passwords must be publicly known; but as the length of the password increases, so does the number of possible passwords
-			making the attack time longer.</p>
+		<p>最后一个方法就是猜测每一个可能的密码，人尽皆知的是爆破/穷举，理论上，如果没有密码尝试限制，爆破成功只是时间问题; 但如果密码长度增加，那么破解时间也会指数级增加</p>
 
 		<br /><hr /><br />
 
-		<h3>Objective</h3>
-		<p>Your goal is to get the administrator’s password by brute forcing. Bonus points for getting the other four user passwords!</p>
+		<h3>目标</h3>
+		<p>你的目标是利用穷举法获取到管理员的密码. 如果你能获取到其他用户的密码还有隐藏奖励</p>
 
 		<br /><hr /><br />
 
-		<h3>Low Level</h3>
-		<p>The developer has completely missed out <u>any protections methods</u>, allowing for anyone to try as many times as they wish, to login to any user without any repercussions.</p>
+		<h3>低安全等级</h3>
+		<p>开发者完完全全没有加 <u>任何防护功能</u>, 允许任何人尝试无数次直到不想尝试为止并获取任何用户密码且悄声无息地进入.</p>
 
 		<br />
 
-		<h3>Medium Level</h3>
-		<p>This stage adds a sleep on the failed login screen. This mean when you login incorrectly, there will be an extra two second wait before the page is visible.</p>
+		<h3>中等安全等级</h3>
+		<p>这一级别添加了尝试次数过多的等待界面，意思是如果你失败次数太多，会有两秒的等待时间来重新显示密码输入界面。</p>
 
-		<p>This will only slow down the amount of requests which can be processed a minute, making it longer to brute force.</p>
-
-		<br />
-
-		<h3>High Level</h3>
-		<p>There has been an "anti Cross-Site Request Forgery (CSRF) token" used. There is a old myth that this protection will stop brute force attacks. This is not the case.
-			This level also extends on the medium level, by waiting when there is a failed login but this time it is a random amount of time between two and four seconds.
-			The idea of this is to try and confuse any timing predictions.</p>
-
-		<p>Using a <?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA', 'CAPTCHA' ); ?> form could have a similar effect as a CSRF token.</p>
+		<p>这个方法只能减缓破解的时间，你可以增加等待时间来让爆破工作进一步延缓.</p>
 
 		<br />
 
-		<h3>Impossible Level</h3>
-		<p>Brute force (and user enumeration) should not be possible in the impossible level. The developer has added a "lock out" feature, where if there are five bad logins within
-			the last 15 minutes, the locked out user cannot log in.</p>
+		<h3>高安全等级</h3>
+		<p>这个等级添加了一个“防跨站请求伪造（Anti-CSRF）”的方法.说明这个方法可以阻止爆破攻击，但这个相信难不倒你.
+			这个等级对比中等安全等级更改了一些扩展，如果错误请求太多次，系统会随机给出一个在2-4秒之间的等待时间.
+			这个方法用于防护长时间的猜解爆破。</p>
 
-		<p>If the locked out user tries to login, even with a valid password, it will say their username or password is incorrect. This will make it impossible to know
-			if there is a valid account on the system, with that password, and if the account is locked.</p>
+		<p>使用<?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/CAPTCHA', '验证码' ); ?> 来获取和反跨站请求伪造相同的效果.</p>
 
-		<p>This can cause a "Denial of Service" (DoS), by having someone continually trying to login to someone's account.
-			This level would need to be extended by blacklisting the attacker (e.g. IP address, country, user-agent).</p>
+		<br />
+
+		<h3>困难等级</h3>
+		<p>穷举/爆破不可能在这个等级成功开发者添加了一个“死锁”功能,如果在十五分钟大于五次登陆失败，则被死锁的用户永远不能登陆.</p>
+
+		<p>如果被死锁的用户继续尝试登陆，就算是错误的密码也会提示用户名或密码错误. 这个方法的好处是无法知道系统上有多少个有效账户,如果被死锁，利用已知账户的密码.</p>
+
+		<p>但这样可能会导致演变为拒绝服务攻击（DoS）,因为有人在不断尝试密码，向服务器发送过多请求.
+			这个等级可能需要向攻击者添加进黑名单(例如. IP地址, 国家, user-agent).</p>
 	</div></td>
 	</tr>
 	</table>
@@ -65,5 +60,5 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Password_cracking' ); ?></p>
+	<p>参考: <?php echo dvwaExternalLinkUrlGet( 'https://en.wikipedia.org/wiki/Password_cracking','关于穷举法的网络攻击'); ?></p>
 </div>
