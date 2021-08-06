@@ -1,0 +1,16 @@
+1.Content Security Policy (CSP)（1） is used to define where scripts and other resources can be loaded or executed from. This module will walk you through ways to bypass the policy based on common mistakes made by developers
+2.None of the vulnerabilities are actual vulnerabilities in CSP, they are vulnerabilities in the way it has been implemented
+3.Bypass Content Security Policy (CSP) and execute JavaScript（2） in the page
+4.Examine the policy to find all the sources that can be used to host external script files
+5.Scripts can be included from Pastebin or Hastebin（2）, try storing some JavaScript on there and then loading it in
+6.The CSP policy tries to use a nonce to prevent inline scripts from being added by attackers
+7.Examine the nonce and see how it varies (or doesn't)
+8.The page makes a JSONP call to source/jsonp.php（4） passing the name of the function to callback（5） to, you need to modify the jsonp.php script to change the callback function
+9.The JavaScript on the page will execute whatever is returned by the page, changing this to your own code will execute that instead
+9.This level is an update of the high level where the JSONP call has its callback function hardcoded and the CSP policy is locked down to only allow external scripts
+
+Note:1.CSP=Cotent Security Policy(内容安全策略)
+     2.JavaScript=一种脚本语言，不必翻译
+     3.Pastebin,Hastebin=代码分享网站，不必翻译
+     4.JSONP，source/jsonp.php(文件名和方法函数名，不必翻译)
+     5.callback=(调用，返回)
