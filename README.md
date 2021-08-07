@@ -1,5 +1,5 @@
 # Translation
-
+目前翻译正在完善，最后的翻译工作就是各大漏洞的说明，保持一天两更，一天一篇说明翻译。
 翻译：@[Basyaact](https://github.com/Basyaact),@[inVains](https://github.com/inVains)
 全环境已汉化，供中国用户使用，如有侵权，请联系邮箱：en.crypt@icloud.com
 README部分来自机器翻译，请以原文为准[README.md](README_en.md)
