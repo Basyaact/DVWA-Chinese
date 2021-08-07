@@ -30,7 +30,7 @@
 		<p><br /></p>
 
 		<h3>Medium Level</h3>
-		<p>开发者尝试加入一个模式匹配来删除“@lt;脚本”功能来禁用任何Javascript方式</p>
+		<p>开发者尝试加入一个模式匹配来删除“&lt;script&gt”功能来禁用任何Javascript方式</p>
 		<pre>Spoiler: <span class="spoiler">您必须首先跳出select块，然后才能添加带有onerror事件的图像:<br />
 <?=htmlentities ("/vulnerabilities/xss_d/?default=English>/option></select><img src='x' onerror='alert(1)'>");?></span>.</pre>
 
@@ -53,5 +53,5 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)' ); ?></p>
+	<p>参考: <?php echo dvwaExternalLinkUrlGet( 'https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)' ); ?></p>
 </div>
