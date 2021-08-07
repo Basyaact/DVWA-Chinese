@@ -6,45 +6,39 @@
 	<tr>
 	<td><div id="code">
 		<h3>About</h3>
-		<p>CSRF is an attack that forces an end user to execute unwanted actions on a web application in which they are currently authenticated.
-			With a little help of social engineering (such as sending a link via email/chat), an attacker may force the users of a web application to execute actions of
-			the attacker's choosing.</p>
+		<p>跨站脚本请求伪造是一种攻击，它可强制终端用户在其当前已通过身份验证的页面上执行恶意操作。并利用社会工程学（例如通过电子邮件/聊天来发送链接），攻击者可能会强制用户执行攻击者所选择的操作</p>
 
-		<p>A successful CSRF exploit can compromise end user data and operation in case of normal user. If the targeted end user is
-			the administrator account, this can compromise the entire web application.</p>
+		<p>一个成功的CSRF攻击可以使用户的数据破坏或者泄漏并进行恶意操作，如果攻击目标为管理员账户，可能会危及整个网站安全。</p>
 
-		<p>This attack may also be called "XSRF", similar to "Cross Site scripting (XSS)", and they are often used together.</p>
+		<p>这种攻击也称为“XSRF（CSRF又名XSRF跨站脚本请求伪造），类似于XSS（XSS=跨站脚本攻击），一般考虑一起使用.</p>
 
 		<br /><hr /><br />
 
 		<h3>Objective</h3>
-		<p>Your task is to make the current user change their own password, without them knowing about their actions, using a CSRF attack.</p>
+		<p>您的任务是使用跨站脚本请求伪造攻击让当前用户改变密码，并且不让管理员查出痕迹.</p>
 
 		<br /><hr /><br />
 
 		<h3>Low Level</h3>
-		<p>There are no measures in place to protect against this attack. This means a link can be crafted to achieve a certain action (in this case, change the current users password).
-			Then with some basic social engineering, have the target click the link (or just visit a certain page), to trigger the action.</p>
+		<p>没有任何保护措施可以免于被此攻击方式攻击。意味着可以创建一个链接来实现特定的操作（在本例中，我们需要更改当前用户的密码）。然后，通过一些基本的社会工程学，让目标用户点击该链接（或只是访问某个页面），以触发该操作</p>
 		<pre>Spoiler: <span class="spoiler">?password_new=password&password_conf=password&Change=Change</span>.</pre>
 
 		<br />
 
 		<h3>Medium Level</h3>
-		<p>For the medium level challenge, there is a check to see where the last requested page came from. The developer believes if it matches the current domain,
-			it must of come from the web application so it can be trusted.</p>
-		<p>It may be required to link in multiple vulnerabilities to exploit this vector, such as reflective XSS.</p>
+		<p>对于此等级，需要检查最后一次的请求的来自何处。开发人员认为，如果它与当前域名或网站匹配，那么它肯定是来自安全的页面，这样才会被信任</p>
+		<p>可能需要使用多个漏洞方式以利用此攻击方法, 例如反射型跨站脚本攻击（Reflected XSS）.</p>
 
 		<br />
 
 		<h3>High Level</h3>
-		<p>In the high level, the developer has added an "anti Cross-Site Request Forgery (CSRF) token". In order by bypass this protection method, another vulnerability will be required.</p>
-		<pre>Spoiler: <span class="spoiler">e.g. Javascript is a executed on the client side, in the browser</span>.</pre>
+		<p>在此等级中开发人员添加了“CSRF令牌”. 为了绕过此保护措施，可能会需要另一个攻击方式。</p>
+		<pre>Spoiler: <span class="spoiler">例如，Javascript是在客户端浏览器（前端）中执行的脚本</span>.</pre>
 
 		<br />
 
 		<h3>Impossible Level</h3>
-		<p>In the impossible level, the challenge will extent the high level and asks for the current user's password. As this cannot be found out (only predicted or brute forced),
-			there is not an attack vector here.</p>
+		<p>在此级别中，挑战将达到高的安全级别，并请求当前用户的密码。因为这是无法察觉的（只能预测或爆破），并且这里没有隐藏的漏洞利用方式</p>
 	</div></td>
 	</tr>
 	</table>
@@ -53,5 +47,5 @@
 
 	<br />
 
-	<p>Reference: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/csrf' ); ?></p>
+	<p>参考: <?php echo dvwaExternalLinkUrlGet( 'https://owasp.org/www-community/attacks/csrf' ); ?></p>
 </div>
