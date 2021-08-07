@@ -2,6 +2,7 @@
 # into the repo.
 config/config.inc.php
 config/config.inc.php.bak
+vulnerabilities/.DS_Store
 Dockerfile
 
 # Vim swap files
