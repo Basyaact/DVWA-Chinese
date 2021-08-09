@@ -3,6 +3,7 @@
 config/config.inc.php
 config/config.inc.php.bak
 vulnerabilities/.DS_Store
+external/phpids/0.6/lib/IDS/tmp/phpids_log.txt
 Dockerfile
 
 # Vim swap files
