@@ -19,7 +19,7 @@ if( isset( $_POST[ 'Upload' ] ) ) {
 		// Can we move the file to the upload folder?
 		if( !move_uploaded_file( $uploaded_tmp, $target_path ) ) {
 			// No
-			$html .= '<pre>你的文件没有被上传d.</pre>';
+			$html .= '<pre>你的文件没有被上传.</pre>';
 		}
 		else {
 			// Yes!
