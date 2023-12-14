@@ -1,3 +1,4 @@
+# 此仓库已过时，仅供参考需求使用，最新版本请根据原仓库说明使用
 # Translation
 目前翻译正在完善，最后的翻译工作就是各大漏洞的说明，保持一天两更，一更一篇说明翻译。
 翻译：@[Basyaact](https://github.com/Basyaact),@[inVains](https://github.com/inVains)
